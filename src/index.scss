@@ -1,0 +1,88 @@
+:root{
+  --white: #ffffff;
+  --black: #000000;
+
+  --gray-100: #e6e6e6;
+  --gray-200: #e0e0e0;
+  --gray-300: #d1d1d1;
+  --gray-400: #a2a2a2;
+  --gray-500: #969696;
+  --gray-600: #342e37;
+  --gray-700: #2b2b2b;
+  --gray-800: #252323;
+  --gray-900: #191716;
+
+  --purple-400: #a682ff;
+  --purple-500: #642ca9;
+
+  --blue-300: #55c1ff;
+  --blue-400: #5887ff;
+  --blue-500: #715aff;
+
+  --red-300: #d64045;
+  --red-400: #C1292E;
+  --red-500: #AD343E;
+
+  --green-200: #23CE6B;
+  --green-300: #26C485;
+  --green-400: #679436;
+  --green-500: #337357;
+
+  --yellow-100: #FFE4C4;
+  --yellow-200: #FFF275;
+  --yellow-300: #FFDF64;
+  --yellow-400: #E0BE36;
+
+  --ff-primary: 'Roboto', sans-serif;
+
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  --fs-500: 1.5rem;
+  --fs-600: 2rem;
+  --fs-700: 3.5rem;
+}
+
+@media (min-width: 40em){
+  :root{
+    --fs-300: 1rem;
+    --fs-400: 1.125rem;
+    --fs-500: 1.75rem;
+    --fs-600: 2.5rem;
+    --fs-700: 5rem;
+  }
+}
+
+*,
+::after,
+::before{
+  box-sizing: border-box;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 2px var(--blue-500);
+}
+
+html, body, #root{
+  height: 100%;
+}
+
+body{
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: var(--ff-primary);
+  background-color: var(--gray-700);
+  color: var(--gray-400);
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, svg{
+  max-width: 100%;
+  display: block;
+}
