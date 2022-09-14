@@ -4,63 +4,63 @@ export const weekDays = [
 
 export const months = [
   {
+    id: 1,
     title: 'Janeiro',
     days: 31,
-    startWeekDay: null,
   },
   {
+    id: 2,
     title: 'Fevereiro',
     days: 28,
-    startWeekDay: null,
   },
   {
+    id: 3,
     title: 'Março',
     days: 31,
-    startWeekDay: null,
   },
   {
+    id: 4,
     title: 'Abril',
     days: 30,
-    startWeekDay: null,
   },
   {
+    id: 5,
     title: 'Maio',
     days: 31,
-    startWeekDay: null,
   },
   {
+    id: 6,
     title: 'Junho',
     days: 30,
-    startWeekDay: null,
   },
   {
+    id: 7,
     title: 'julho',
     days: 31,
-    startWeekDay: null,
   },
   {
+    id: 8,
     title: 'Agosto',
     days: 31,
-    startWeekDay: null,
   },
   {
+    id: 9,
     title: 'Setembro',
     days: 30,
-    startWeekDay: null,
   },
   {
+    id: 10,
     title: 'Outubro',
     days: 31,
-    startWeekDay: null,
   },
   {
+    id: 11,
     title: 'Novembro',
     days: 30,
-    startWeekDay: null,
   },
   {
+    id: 12,
     title: 'Dezembro',
     days: 31,
-    startWeekDay: null,
   },
 ];

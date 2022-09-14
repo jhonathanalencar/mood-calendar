@@ -64,6 +64,15 @@
         align-items: center;
         justify-content: center;
       }
+
+      &.previous{
+        border-color: var(--gray-300);
+        outline-color: var(--gray-300);
+
+        span {
+          color: var(--gray-300);
+        }
+      }
     }
   }
 }

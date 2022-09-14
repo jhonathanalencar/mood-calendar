@@ -8,7 +8,12 @@ export function Calendar(){
     <div className={styles.calendars__wrapper}>
       {months.map((month, index) =>{
         return(
-          <Month title={month.title} monthDays={month.days} key={month.title + index} />
+          <Month 
+            key={month.title + index}
+            monthId={month.id}
+            title={month.title} 
+            monthDays={month.days} 
+          />
         )
       })}
     </div>

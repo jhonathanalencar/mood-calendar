@@ -4,15 +4,14 @@ import { convertNumberToArrayOfDays } from '../../utils/convertNumberToArrayOfDa
 import styles from './styles.module.scss';
 
 interface monthProps{
+  monthId: number;
   title: string;
   monthDays: number;
-  startWeekDay?: Date;
 }
 
-export function Month({ title, monthDays }: monthProps){
-  const days = convertNumberToArrayOfDays(monthDays);
-
-  console.log(days)
+export function Month({ title, monthDays, monthId }: monthProps){
+  const days = convertNumberToArrayOfDays(monthDays, monthId);
+  const firstDayIndex = days.findIndex((day) => day === 1);
 
   return(
     <div className={styles.calendar}>
@@ -29,7 +28,11 @@ export function Month({ title, monthDays }: monthProps){
       <div className={styles.month}>
         {days.map((day, index) =>{
           return(
-            <button type="button" key={day + index}>
+            <button 
+              key={day + Math.random() * index}
+              type="button"
+              className={firstDayIndex > index ? styles.previous : ''} 
+            >
               <span>{day}</span>
             </button>
           )

@@ -1,8 +1,7 @@
-import { FaRegSadTear, FaRegMeh, FaRegLaughBeam, FaRegSmile, FaRegAngry, FaRegTired } from 'react-icons/fa';
+import { FaRegSadTear, FaRegMeh, FaRegLaughBeam, FaRegAngry, FaRegTired } from 'react-icons/fa';
 
 import styles from './App.module.scss';
 import { Calendar } from './components/Calendar';
-import { Month } from './components/Month';
 
 export function App() {
   return (
