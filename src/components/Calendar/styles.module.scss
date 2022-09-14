@@ -1,0 +1,13 @@
+.calendars__wrapper {
+  margin-top: 3rem;
+  width: 90vw;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
+  max-width: 62.5em; // 1000px
+
+  @media (min-width: 50em) {
+    width: 95vw;
+  }
+}

@@ -1,6 +1,8 @@
 import { FaRegSadTear, FaRegMeh, FaRegLaughBeam, FaRegSmile, FaRegAngry, FaRegTired } from 'react-icons/fa';
 
 import styles from './App.module.scss';
+import { Calendar } from './components/Calendar';
+import { Month } from './components/Month';
 
 export function App() {
   return (
@@ -30,128 +32,8 @@ export function App() {
           </button>
         </div>
       </div>
-      <div className={styles.calendars__wrapper}>
-        <div className={styles.calendar}>
-          <header>
-            <strong>January</strong>
-            <div className={styles.days}>
-              <span>Dom</span>
-              <span>Seg</span>
-              <span>Ter</span>
-              <span>Qua</span>
-              <span>Qui</span>
-              <span>Sex</span>
-              <span>Sab</span>
-            </div>
-          </header>
-          <div className={styles.month}>
-            <button>
-              <span>21</span>
-            </button>
-            <button>
-              <span>21</span>
-            </button>
-            <button>
-              <span>21</span>
-            </button>
-            <button>
-              <span>21</span>
-            </button>
-            <button>
-              <span>21</span>
-            </button>
-            <button>
-              <span>21</span>
-            </button>
-            <button>
-              <span>21</span>
-            </button>
-            <button>
-              <span>21</span>
-            </button>
-          </div>
-        </div>
-        <div className={styles.calendar}>
-          <header>
-            <strong>January</strong>
-            <div className={styles.days}>
-              <span>Dom</span>
-              <span>Seg</span>
-              <span>Ter</span>
-              <span>Qua</span>
-              <span>Qui</span>
-              <span>Sex</span>
-              <span>Sab</span>
-            </div>
-          </header>
-          <div className={styles.month}>
-            <button>
-              <span>1</span>
-            </button>
-            <button>
-              <span>2</span>
-            </button>
-            <button>
-              <span>3</span>
-            </button>
-            <button>
-              <span>4</span>
-            </button>
-            <button>
-              <span>21</span>
-            </button>
-            <button>
-              <span>21</span>
-            </button>
-            <button>
-              <span>21</span>
-            </button>
-            <button>
-              <span>21</span>
-            </button>
-          </div>
-        </div>
-        <div className={styles.calendar}>
-          <header>
-            <strong>January</strong>
-            <div className={styles.days}>
-              <span>Dom</span>
-              <span>Seg</span>
-              <span>Ter</span>
-              <span>Qua</span>
-              <span>Qui</span>
-              <span>Sex</span>
-              <span>Sab</span>
-            </div>
-          </header>
-          <div className={styles.month}>
-            <button>
-              <span>21</span>
-            </button>
-            <button>
-              <span>31</span>
-            </button>
-            <button>
-              <span>21</span>
-            </button>
-            <button>
-              <span>21</span>
-            </button>
-            <button>
-              <span>21</span>
-            </button>
-            <button>
-              <span>21</span>
-            </button>
-            <button>
-              <span>21</span>
-            </button>
-            <button>
-              <span>21</span>
-            </button>
-          </div>
-        </div>
-      </div>
+
+      <Calendar />
     </main>
   )
 }
