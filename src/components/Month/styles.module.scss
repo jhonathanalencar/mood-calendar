@@ -54,7 +54,7 @@
       outline: 0.1rem solid var(--gray-400);
 
       span {
-        padding-block: 0.5rem;
+        padding-block: 1rem;
         font-size: var(--fs-400);
         color: var(--gray-500);
         font-weight: bold;
@@ -63,6 +63,26 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        line-height: 1;
+      }
+
+      &.today{
+        z-index: 1;
+
+        span{
+          position: relative;
+          color: var(--purple-500);
+        }
+        
+        span::after{
+          content: '';
+          position: absolute;
+          z-index: -1;
+          height: 90%;
+          width: 90%;
+          clip-path: circle();
+          background-color: var(--yellow-100);
+        }
       }
 
       &.previous{

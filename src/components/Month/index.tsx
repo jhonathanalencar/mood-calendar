@@ -1,5 +1,8 @@
 import { weekDays } from '../../constants';
-import { convertNumberToArrayOfDays } from '../../utils/convertNumberToArrayOfDays';
+import { 
+  convertNumberToArrayOfDays, 
+  verifyTodayDate 
+} from '../../utils';
 
 import styles from './styles.module.scss';
 
@@ -12,6 +15,10 @@ interface monthProps{
 export function Month({ title, monthDays, monthId }: monthProps){
   const days = convertNumberToArrayOfDays(monthDays, monthId);
   const firstDayIndex = days.findIndex((day) => day === 1);
+  
+  function cn(...classes: string[]){
+    return classes.filter(Boolean).join(' ');
+  }
 
   return(
     <div className={styles.calendar}>
@@ -27,13 +34,18 @@ export function Month({ title, monthDays, monthId }: monthProps){
       </header>
       <div className={styles.month}>
         {days.map((day, index) =>{
+          const isToday = verifyTodayDate(monthId, day);
+
           return(
             <button 
               key={day + Math.random() * index}
               type="button"
-              className={firstDayIndex > index ? styles.previous : ''} 
+              className={cn(
+                firstDayIndex > index ? styles.previous : '',
+                isToday ? styles.today : ''
+              )} 
             >
-              <span>{day}</span>
+              <span>{String(day).padStart(2, '0')}</span>
             </button>
           )
         })}
