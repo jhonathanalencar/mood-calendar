@@ -43,36 +43,3 @@
     width: 95vw;
   }
 }
-
-.calendar__mood{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
-  gap: 1rem;
-  
-  span{
-    color: var(--gray-200);
-    font-size: var(--fs-400);
-  }
-
-  .calendar__mood_options{
-    display: flex;
-    gap: 1rem;
-
-    button{
-      background: none;
-      border: none;
-      cursor: pointer;
-
-      svg{
-        font-size: 2.5rem;
-        color: var(--gray-500);
-
-        @media (min-width: 50em){
-          font-size: 3rem;
-        }
-      }
-    }
-  }
-}

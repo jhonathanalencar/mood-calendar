@@ -1,3 +1,11 @@
+export const moodColors = {
+  purple: '#a682ff',
+  blue: '#5887ff',
+  red: '#C1292E',
+  green: '#26C485',
+  yellow: '#E0BE36',
+} as const;
+
 export const weekDays = [
   'Dom', 'Seg', 'Ter', 'Qua', 'Qui' , 'Sex', 'Sab'
 ];

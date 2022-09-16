@@ -1,0 +1,51 @@
+.mood {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    font-size: 2.5rem;
+    color: var(--gray-500);
+    transition: color 0.3s ease;
+
+    @media (min-width: 50em) {
+      font-size: 3rem;
+    }
+  }
+
+
+  &.green:hover,
+  &.green.selectedMood{
+    svg {
+      color: var(--green-300);
+    }
+  }
+
+  &.yellow:hover,
+  &.yellow.selectedMood{
+    svg {
+      color: var(--yellow-400);
+    }
+  }
+
+  &.purple:hover,
+  &.purple.selectedMood{
+    svg {
+      color: var(--purple-400);
+    }
+  }
+
+  &.red:hover,
+  &.red.selectedMood{
+    svg {
+      color: var(--red-400);
+    }
+  }
+
+  &.blue:hover,
+  &.blue.selectedMood{
+    svg {
+      color: var(--blue-400);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.calendar__mood {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+
+  span {
+    color: var(--gray-200);
+    font-size: var(--fs-400);
+  }
+
+  .calendar__mood_options {
+    display: flex;
+    gap: 1rem;
+  }
+}

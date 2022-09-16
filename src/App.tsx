@@ -1,7 +1,7 @@
-import { FaRegSadTear, FaRegMeh, FaRegLaughBeam, FaRegAngry, FaRegTired } from 'react-icons/fa';
+import { Calendar } from './components/Calendar';
+import { Moods } from './components/Moods';
 
 import styles from './App.module.scss';
-import { Calendar } from './components/Calendar';
 
 export function App() {
   return (
@@ -11,26 +11,8 @@ export function App() {
         <strong >Como você está se sentindo?</strong>
         <span>Pinte os dias do mês baseado no seu humor naquele dia.</span>
       </div>
-      <div className={styles.calendar__mood}>
-        <span>Selecione seu humor: </span>
-        <div className={styles.calendar__mood_options}>
-          <button>
-            <FaRegLaughBeam />
-          </button>
-          <button>
-            <FaRegTired />
-          </button>
-          <button>
-            <FaRegMeh />
-          </button>
-          <button>
-            <FaRegAngry />
-          </button>
-          <button>
-            <FaRegSadTear />
-          </button>
-        </div>
-      </div>
+
+      <Moods />
 
       <Calendar />
     </main>

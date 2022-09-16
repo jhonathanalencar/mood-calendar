@@ -1,8 +1,12 @@
+import { useState } from 'react';
 import { weekDays } from '../../constants';
+import { useGlobalContext } from '../../hooks/useGlobalContext';
 import { 
+  cn,
   convertNumberToArrayOfDays, 
   verifyTodayDate 
 } from '../../utils';
+import { Day } from '../Day';
 
 import styles from './styles.module.scss';
 
@@ -15,11 +19,7 @@ interface monthProps{
 export function Month({ title, monthDays, monthId }: monthProps){
   const days = convertNumberToArrayOfDays(monthDays, monthId);
   const firstDayIndex = days.findIndex((day) => day === 1);
-  
-  function cn(...classes: string[]){
-    return classes.filter(Boolean).join(' ');
-  }
-
+ 
   return(
     <div className={styles.calendar}>
       <header>
@@ -35,18 +35,21 @@ export function Month({ title, monthDays, monthId }: monthProps){
       <div className={styles.month}>
         {days.map((day, index) =>{
           const isToday = verifyTodayDate(monthId, day);
+          const isPreviousMonth = firstDayIndex > index
 
           return(
-            <button 
+            <Day 
               key={day + Math.random() * index}
-              type="button"
+              day={day}
+              title={isToday ? 'Hoje' : ''}
+              isToday={isToday}
+              isPreviousMonth={isPreviousMonth}
               className={cn(
-                firstDayIndex > index ? styles.previous : '',
+                isPreviousMonth ? styles.previous : '',
                 isToday ? styles.today : ''
               )} 
-            >
-              <span>{String(day).padStart(2, '0')}</span>
-            </button>
+              disabled={isPreviousMonth}
+            />
           )
         })}
       </div>
