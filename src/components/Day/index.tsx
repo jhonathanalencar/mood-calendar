@@ -16,7 +16,6 @@ export function Day({ day, isToday, isPreviousMonth, ...rest }: DaysProps){
 
   function handleColorDayWithCurrentMood(){
     if(!moodColor){ return; }
-
     
     if(isSelected && !isSameColor){
       setSelectedMood(moodColor);
